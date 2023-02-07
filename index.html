@@ -2,21 +2,18 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="RoboPianist: A Benchmark for High-Dimensional Robot Control">
+  <meta name="description" content="RoboPianist: A Benchmark for High-Dimensional Robot Control">
   <meta name="keywords" content="dexterous control, bimanual dexterity, piano">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RoboPianist</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -25,82 +22,145 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
+
 <body>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">RoboPianist: A Benchmark for High-Dimensional Robot Control</h1>
-
+  <!-- Title. -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="publication-links">
-            </div>
-
+            <h1 class="title is-1 publication-title">RoboPianist: A Benchmark for High-Dimensional Robot Control</h1>
+            <h3 class="title is-4 conference-authors"><a target="_blank">In Submission to RSS 2023</a></h3>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls loop height="100%">
-            <source src="https://robopianist.github.io/media/videos/twinkle_twinkle.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls loop height="100%">
-            <source src="https://robopianist.github.io/media/videos/k331.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls loop height="100%">
-            <source src="https://robopianist.github.io/media/videos/k545.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls loop height="100%">
-            <source src="https://robopianist.github.io/media/videos/nocturne.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls loop height="100%">
-            <source src="https://robopianist.github.io/media/videos/the_entertainer.mp4"
-                    type="video/mp4">
-          </video>
+  <!-- Abstract. -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              We introduce a new benchmarking suite for high-dimensional control, targeted at testing high spatial and temporal precision, coordination, and planning, all with an underactuated system frequently making-and-breaking contacts. The proposed challenge is <em>mastering the piano</em> through bi-manual dexterity, using a pair of simulated anthropomorphic robot hands. We call it <span class="drobopianist">RoboPianist</span>, and the initial version covers a broad set of 150 variable-difficulty songs. We investigate both model-free and model-based methods on the benchmark, characterizing their performance envelopes. We present that while certain existing methods, when well-tuned, can achieve impressive levels of performance in certain aspects, there is significant room for improvement. <span class="drobopianist">RoboPianist</span> provides a rich quantitative benchmarking environment, with human-interpretable results, high ease of expansion by simply augmenting the repertoire with new songs, and opportunities for further research, including in multi-task learning, zero-shot generalization, multimodal (sound, vision, touch) learning, and imitation.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="subtitle has-text-centered">Highlights</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-twinkle">
+            <video poster="" id="twinkle" controls height="100%">
+              <source src="media/videos/highlights/twinkle_twinkle.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-k331">
+            <video poster="" id="k331" controls height="100%">
+              <source src="media/videos/highlights/k331.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-k545">
+            <video poster="" id="k545" controls height="100%">
+              <source src="media/videos/highlights/k545.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-nocturne">
+            <video poster="" id="nocturne" controls height="100%">
+              <source src="media/videos/highlights/nocturne.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            We introduce a new benchmarking suite for high-dimensional control, targeted at testing high spatial and temporal precision, coordination, and planning, all with an underactuated system frequently making-and-breaking contacts. The proposed challenge is mastering the piano through bi-manual dexterity, using a pair of simulated anthropomorphic robot hands. We call it RoboPianist, and the initial version covers a broad set of 150 variable-difficulty songs. We investigate both model-free and model-based methods on the benchmark, characterizing their performance envelopes. We present that while certain existing methods, when well-tuned, can achieve impressive levels of performance in certain aspects, there is significant room for improvement. RoboPianist provides a rich quantitative benchmarking environment, with human-interpretable results, high ease of expansion by simply augmenting the repertoire with new songs, and opportunities for further research, including in multi-task learning, zero-shot generalization, multimodal (sound, vision, touch) learning, and imitation.
-          </p>
+  <div class="container is-max-widescreen">
+    <div class="rows">
+
+      <h3 class="title is-4">Example songs on which the model-free method does reasonably well</h3>
+      <div class="columns">
+
+        <div class="column has-text-centered">
+          <div class="item item-k280">
+            <h2 class="subtitle has-text-centered">Piano Sonata K280 in F Major</h2>
+            <video poster="" id="k280" controls height="100%">
+              <source src="media/videos/robopianist-repertoire-150/model-free/piano_sonata_k280_in_f_major.mp4" type="video/mp4">
+            </video>
+            <h2 class="subtitle has-text-centered">F1 = 0.80</h2>
+          </div>
+        </div>
+
+        <div class="column has-text-centered">
+          <div class="item item-frenchsuite5">
+            <h2 class="subtitle has-text-centered">French Suite No. 5</h2>
+            <video poster="" id="frenchsuite5" controls height="100%">
+              <source src="media/videos/robopianist-repertoire-150/model-free/french_suite_no_5_sarabande.mp4" type="video/mp4">
+            </video>
+            <h2 class="subtitle has-text-centered">F1 = 0.73</h2>
+          </div>
+        </div>
+
+        <div class="column has-text-centered">
+          <div class="item item-clairdelune">
+            <h2 class="subtitle has-text-centered">Clair De Lune</h2>
+            <video poster="" id="clairdelune" controls height="100%">
+              <source src="media/videos/robopianist-repertoire-150/model-free/clair_de_lune.mp4" type="video/mp4">
+            </video>
+            <h2 class="subtitle has-text-centered">F1 = 0.64</h2>
+          </div>
+        </div>
+
+      </div>
+
+      <h3 class="title is-4">Example songs on which the model-free method struggles</h3>
+      <div class="columns">
+
+        <div class="column has-text-centered">
+          <div class="item item-furelise">
+            <h2 class="subtitle has-text-centered">Für Elise</h2>
+            <video poster="" id="furelise" controls height="100%">
+              <source src="media/videos/robopianist-repertoire-150/model-free/fur_elise.mp4" type="video/mp4">
+            </video>
+            <h2 class="subtitle has-text-centered">F1 = 0.57</h2>
+          </div>
+        </div>
+
+        <div class="column has-text-centered">
+          <div class="item item-liebestraum3">
+            <h2 class="subtitle has-text-centered">Liebestraum No. 3</h2>
+            <video poster="" id="liebestraum3" controls height="100%">
+              <source src="media/videos/robopianist-repertoire-150/model-free/liebestraum_3.mp4" type="video/mp4">
+            </video>
+            <h2 class="subtitle has-text-centered">F1 = 0.56</h2>
+          </div>
+        </div>
+
+        <div class="column has-text-centered">
+          <div class="item item-gymnopedie1">
+            <h2 class="subtitle has-text-centered">Gymnopedie No. 1</h2>
+            <video poster="" id="gymnopedie1" controls height="100%">
+              <source src="media/videos/robopianist-repertoire-150/model-free/gymnopedie_no_1.mp4" type="video/mp4">
+            </video>
+            <h2 class="subtitle has-text-centered">F1 = 0.28</h2>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
-
-
 
 <footer class="footer">
   <div class="container">
